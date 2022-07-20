@@ -1,0 +1,24 @@
+<!-- Q.4 Write a program to find out area of circle.  -->
+<html>
+    <head>
+        <title>p4</title>
+    </head>
+<body>
+
+    <input type="text" placeholder="Enter the Radius" id="r"><br><br>
+    <input type="button" value="Click to get area of circle" onclick="radius()"><br><br>
+    <input type="text" id="result">
+
+
+    <script>
+function radius() {
+    var r = parseFloat(document.getElementById("r").value);
+    a = 3.14
+    b = a*r*r;
+    document.getElementById("result").value = b;
+}
+
+
+    </script>
+</body>
+</html>

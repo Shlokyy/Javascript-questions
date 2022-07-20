@@ -1,0 +1,22 @@
+<!-- Q.3 Write a program to find out square of given number.  -->
+<html>
+    <head>
+        <title>p3</title>
+    </head>
+    <body>
+        <input type="text" id="num"><br><br>
+        <input type="button" value="Click to get Square" onclick="square()"><br><br>
+        <input type="text" id="result">
+
+
+        <script>
+        function square() {
+            var num = parseInt(document.getElementById("num").value);
+            var  r = num*num;
+            document.getElementById("result").value = r;
+
+        }
+
+        </script>
+    </body>
+</html>

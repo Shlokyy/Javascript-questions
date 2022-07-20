@@ -1,0 +1,25 @@
+<!-- Q.5 Write a program to find out simple interest (SI).  -->
+<html>
+    <head>
+        <title>p5</title>
+    </head>
+    <body>
+        <label>Enter the principal : </label><input type="text" id="p"><br><br>
+        <label>Enter the rate of interest : </label><input type="text" id="rate"><br><br>
+        <label>Enter the time Period : </label><input type="text" id="tp"><br><br>
+        <input type="button" value="Calcluate Simple Interest" onclick="si()"><br><br>
+        <label>Amount : </label><input type="text" id="amount"><br><br>
+        <script>
+
+            function si() {
+            var p = parseInt(document.getElementById("p").value);
+            var r = parseFloat(document.getElementById("rate").value);
+            var t = parseInt(document.getElementById("tp").value);
+            var si = p*r*t/100;
+            var a = p + si;
+            document.getElementById("amount").value = a;
+            }
+            
+        </script>  
+    </body>
+</html>

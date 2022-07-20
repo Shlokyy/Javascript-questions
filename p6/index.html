@@ -1,0 +1,27 @@
+<!-- Q.6 Write a program to find gross salary (Hint :- 
+GS=BS+DA+TA).  -->
+
+
+<html>
+    <head>
+        <title>p6</title>
+    </head>
+    <body>
+
+    <label >Enter the Basic Salary : </label><input type="number" id="bs"><br><br>
+    <label >Enter the TA(Travelling Allowance) : </label><input type="number" id="ta"><br><br>
+    <label >Enter the DA(Dearness Allowance) : </label> <input type="number" id="da"><br><br>
+    <button onclick="gs()">Calculate Your Gross Salary</button><br><br>
+    <label >Your Gross Salary is  : </label><input type="text" id="result">
+
+        <script>
+   function gs() {
+    var bs = parseInt(document.getElementById("bs").value);
+    var ta = parseInt(document.getElementById("ta").value);
+    var da = parseInt(document.getElementById("da").value); 
+    var r = bs + ta + da;
+    document.getElementById("result").value = r
+   }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!-- Q.7 Write a program accept 5 subject marks (HintP=67,C=87,M=90,H=98,E=88) and calculate total marks and 
+percentage.  -->
+<html>
+    <head>
+        <title>p7</title>
+    </head>
+    <body>
+        <div class="container">
+    <pre>
+     <h1>Result</h1>
+<b>Enter the Marks of Physics   : </b><input type="number" id="p"><br>
+<b>Enter the Marks of Chemistry : </b><input type="number" id="c"><br>
+<b>Enter the Marks of Maths     : </b><input type="number" id="m"><br>
+<b>Enter the Marks of Hindi     : </b><input type="number" id="h"><br>
+<b>Enter the Marks of English   : </b><input type="number" id="e"><br>
+<button onclick="result()">Calculate the Result </button><br>
+<b>Total Marks Obtain out of 500 : </b><input type="number" id="total"> <br>
+<b>Percentage : </b><input type="number" id="percent">
+<h2 id="message"></h2>
+    </pre>
+        </div>
+        <script>
+            function result() {
+                var p = parseInt(document.getElementById("p").value);
+                var c = parseInt(document.getElementById("c").value);
+                var m = parseInt(document.getElementById("m").value);
+                var h = parseInt(document.getElementById("h").value);
+                var e = parseInt(document.getElementById("e").value);
+                var a = p + c + m + h + e;
+                var pe = a/5;
+                document.getElementById("total").value = a;
+                document.getElementById("percent").value = pe;
+           
+                if (pe<=59) {
+                    document.getElementById("message").innerText = "You Are Fail"
+                } else if(pe<=100 && pe>=90){
+                    document.getElementById("message").innerText = "Congratulations you got A"
+                } else if(pe<=89 && pe>=80){
+                    document.getElementById("message").innerText = "Congratulations you got B"
+                } else if(pe<=79 && pe>=70){
+                    document.getElementById("message").innerText = "Congratulations you got C"
+                } else if(pe<=69 && pe>=60){
+                    document.getElementById("message").innerText = "Congratulations you got D"
+                }
+
+            }
+
+        </script>
+    </body>
+</html>
